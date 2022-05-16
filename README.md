@@ -12,6 +12,17 @@ The dataset contains the airline passenger survey data to predict features corre
 which is saved in “.CSV” file format. There are two files: training data and test data. Altogether there are 25 columns and 129,880 rows.
 Many of the columns are ordinal factors that ask passengers to rank their level of satisfaction with a particular aspect of their trip,
 such as inflight service or convenience. 
+![image](https://user-images.githubusercontent.com/79218659/168670562-a569b5a4-401b-4b15-875a-8ab78b42d30e.png)
+![image](https://user-images.githubusercontent.com/79218659/168670592-d2b12bc5-952c-44eb-8531-06bfc417cb4d.png)
+![image](https://user-images.githubusercontent.com/79218659/168670610-8fc099b8-56fb-4ebe-bcbc-304d65dd90cc.png)
+![image](https://user-images.githubusercontent.com/79218659/168670624-a7f1223e-6dba-4175-8d8e-07059211796d.png)
+![image](https://user-images.githubusercontent.com/79218659/168670644-b1738406-3dde-4767-94e0-5ad3c58a59d9.png)
+![image](https://user-images.githubusercontent.com/79218659/168670662-397f03c2-8c73-4fee-933a-f39196ec51ce.png)
+![image](https://user-images.githubusercontent.com/79218659/168670680-c49835c6-347e-4af6-92c2-11884f3f024f.png)
+![image](https://user-images.githubusercontent.com/79218659/168670699-1d0f05cd-0828-44a3-92f0-fea309aa630d.png)
+![image](https://user-images.githubusercontent.com/79218659/168670726-ba3549f8-3ea0-485d-90ee-0128b28ac228.png)
+![image](https://user-images.githubusercontent.com/79218659/168670744-56992073-8b8c-42f1-b78a-80107d3d7ec4.png)
+
 
 
 # MODELING TECHNIQUES
@@ -19,17 +30,38 @@ After preparing the data, we can implement several tree-based methods and set pe
 A.   Models    
 1)	Logistic Regression
 Logistic regression is a classification algorithm used to find the probability of success or failure of certain event. It describes the relationship between one dependent variable and one or more independent variables. Logistic regression is easy to implement, interpret, and efficient to train. It performs well when the data set is linearly separable and can easily extend to multiple classes and a probabilistic view of class predictions. 
+![image](https://user-images.githubusercontent.com/79218659/168670780-e666c3d4-ba48-4f29-abab-dddaa06385ff.png)
+![image](https://user-images.githubusercontent.com/79218659/168670798-7348c88c-af15-4537-9752-a90828b7c0d1.png)
+
 2)	Decision Tree
 Decision Tree is a type of supervised machine learning where the data is continuously split according to a certain parameter. It shows the process of decision and easy to interpret and understand the outcome with an abridged description. Decision Tree works well with categorical variables without encoding. It is also useful handling missing values in training set or testing set as it categorizes missing values as one category. 
+![image](https://user-images.githubusercontent.com/79218659/168670818-42e64a1f-0ba1-432b-8a9e-de4d9793331e.png)
+![image](https://user-images.githubusercontent.com/79218659/168670831-024f0343-557b-4035-af6e-6f6f44f526ca.png)
+
 3)	  Random Forest
 A random forest model is an ensemble machine learning algorithm that creates multiple uncorrelated decision trees by taking a bagging approach to sampling along. It differs from bagging as it takes a random selection of features as opposed to all of them. The collective results from these trees are then used to make a classification for a given datapoint. Random forests is very accurate dealing with non-linear data as well as outliers and works well with large datasets. Conversely though, the training process is notably slow. 
+![image](https://user-images.githubusercontent.com/79218659/168670897-6467e761-af28-4c09-b41a-ded5a72547a5.png)
+![image](https://user-images.githubusercontent.com/79218659/168670915-1674c47c-4266-4726-95c5-99be013b7f61.png)
+
 4)	 Bagging
 Bagging, which stands for “bootstrap aggregation”, is an ensemble method that creates a number of learner models. These models run in parallel with each other and the overall average of their results is averaged with equal weighting in order to make a prediction. By taking the average result, this approach is able to reduce the variance that comes from a simple decision tree model. However, it does not reduce bias. The equal weighting method too may also result in trees that have no real impact being used for the prediction. With this in mind, we explore how a bagging approach can help us determine whether a given passenger is satisfied or not satisfied.
+![image](https://user-images.githubusercontent.com/79218659/168670866-de276cd2-0fce-451c-8ad3-06c8480881df.png)
+![image](https://user-images.githubusercontent.com/79218659/168670880-17e832fa-6f27-4db0-bf7e-292684ffc94c.png)
+
 5)	Gradient Boosting Machine
+A GBM approach uses boosting and applies a gradient descent algorithm to minimize the loss function. It has been noted to have a very high predictive power, even more so than a random forest. GBM has a lot of flexibility since it enables optimization on different loss functions with various hyperparameters tuning options. On the flip side, despite its strong predictive performance, it could result in overfitting. Additionally, although flexible, it is very complex, computationally expensive, and less interpretable than other models.
+![image](https://user-images.githubusercontent.com/79218659/168670940-d43cb272-2308-4225-845e-aba07c72feab.png)
+![image](https://user-images.githubusercontent.com/79218659/168670984-8b373647-3782-4745-8541-7978cb905dba.png)
+
+
 A GBM approach uses boosting and applies a gradient descent algorithm to minimize the loss function. It has been noted to have a very high predictive power, even more so than a random forest. GBM has a lot of flexibility since it enables optimization on different loss functions with various hyperparameters tuning options. On the flip side, despite its strong predictive performance, it could result in overfitting. Additionally, although flexible, it is very complex, computationally expensive, and less interpretable than other models.
 6)	Neural Network
 A Neural Network is a series of algorithms that endeavors to recognize underlying relationships in a set of data through a process that mimics the way the human brain operates. In this sense, neural networks refer to systems of neurons, either organic or artificial in nature. Neural Networks can adapt to changing input, so it generates the best possible result without needing to redesign the output criteria.
 Artificial Neural Networks (ANN) are comprised of simple elements, called neurons, each of which can make simple mathematical decisions. Together, the neurons can analyze complex problems, emulate almost any function including very complex ones, and provide accurate answers. A shallow neural network has three layers of neurons: an input layer, a hidden layer, and an output layer. 
+
+![image](https://user-images.githubusercontent.com/79218659/168671019-1cdf7004-6cc8-4dce-821d-52d770b00579.png)
+![image](https://user-images.githubusercontent.com/79218659/168671037-6514baa7-6b82-4fda-ac48-e8a53a6146a5.png)
+
 
 
 
@@ -105,7 +137,8 @@ The model has already been fairly optimized since the ReLU activation function a
        The time improved by a few seconds, but the accuracy suffered with this new learning rate. It is important to note though that smaller learning rates may need more training epochs to prevent the model from converging too quickly to a solution. If we choose not to use an adaptive learning rate, then we will need to alter the other parameters to see what works best with a specific learning rate.
        Finally, we see how the number of layers and nodes can affect the model. We take out a layer and update the number of nodes. 
          All other factors are then left as the original model and then compiled. The running time is less but the accuracy also decreases from our original model.  
-         
+         ![image](https://user-images.githubusercontent.com/79218659/168671083-a82174fb-af5d-4ec9-bfcb-56d4238dc365.png)
+
          
 
 
@@ -114,5 +147,6 @@ The model has already been fairly optimized since the ReLU activation function a
 The logistic regression was especially insightful in making predictive classifications since it was able to optimize the model through an elastic net regularization. Going forward, we can use these models to better understand the initial problem of the dataset and how to best determine whether a passenger is satisfied with their travel experience or not.
 From the comparison we could see that when increasing the batch size of Neural Network model, our prediction gets the highest accuracy of 97%. The Logistic Regression takes the a short amount of time in the model training process but the accuracy is the lowest. The decision tree is extremely fast and is fairly accurate, which suggest that a more simplistic model may be the most efficient in these cases. Meanwhile, the Random Forest model also gets a high accuracy while it takes much less time than Neural Network and Bagging model. Since it is important to consider the tradeoff between accuracy and the running time, in this project we would recommend predicting the customer airline satisfaction using the Random Forest method. 
 
- 
+ ![image](https://user-images.githubusercontent.com/79218659/168671110-80e30d11-ad6c-4c9e-a0a1-12e76f72ac3a.png)
+
 
